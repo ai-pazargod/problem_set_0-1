@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Search</title>
+        <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        .search-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        form {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .link-container {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+        }
+        .link-container a {
+            margin-left: 10px;
+            text-decoration: none;
+            font-size: 16px;
+        }
+        .search {
+            color: rgb(28, 153, 17);
+        }
+        .advance {
+            color: rgb(173, 30, 5);
+        }
+
+        </style>
+    </head>
+    <body>
+        <div class="search-container">
+            <form action="https://images.google.com/">
+                <input type="text" name="q">
+                <input type="submit" value="Google Image">
+            </form>
+        </div>
+        <div class="link-container">
+            <a class="search" href="index.html">Google Search</a>
+            <a class="advance" href="advance.html">Advanced Search</a>
+        </div>
+    </body>
+</html>
