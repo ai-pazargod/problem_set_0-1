@@ -34,15 +34,14 @@
             color: rgb(28, 153, 17);
         }
         .advance {
-            color: rgb(173, 30, 5);
+            color: rgb(255, 38, 0);
         }
-
         </style>
     </head>
     <body>
         <div class="search-container">
-            <form action="https://images.google.com/">
-                <input type="text" name="q">
+            <form id="imageSearchForm">
+                <input type="text" name="q" placeholder="Type your here">
                 <input type="submit" value="Google Image">
             </form>
         </div>
@@ -50,5 +49,13 @@
             <a class="search" href="index.html">Google Search</a>
             <a class="advance" href="advance.html">Advanced Search</a>
         </div>
+        <script>
+            document.getElementById('imageSearchForm').addEventListener('submit', function(event) {
+                event.preventDefault();
+                const query = encodeURIComponent(this.q.value);
+                const url = `https://www.google.com/search?tbm=isch&q=${query}`;
+                window.location.href = url;
+            });
+        </script>
     </body>
 </html>
